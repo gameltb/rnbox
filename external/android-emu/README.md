@@ -7,5 +7,5 @@ https://android.googlesource.com/platform/prebuilts/android-emulator-build/commo
 at commit 99b2ed8292b3b0a9e39e91033bf07496307bc796  
 
 ```shell
-mkdir out ; cmake .. ; make -j8 OpenglRender
+mkdir out ; cd out ; cmake .. ; make -j8 OpenglRender
 ```
