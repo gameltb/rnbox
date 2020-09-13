@@ -189,15 +189,15 @@ set(android-emu-common
     # android/network/WifiForwardPeer.cpp
     # android/network/WifiForwardPipe.cpp
     # android/network/WifiForwardServer.cpp
-    # android/opengl/EmuglBackendList.cpp
-    # android/opengl/EmuglBackendScanner.cpp
-    # android/opengl/emugl_config.cpp
-    # android/opengl/GpuFrameBridge.cpp
-    # android/opengl/GLProcessPipe.cpp
-    # android/opengl/gpuinfo.cpp
-    # android/opengl/logger.cpp
-    # android/opengl/OpenglEsPipe.cpp
-    # android/opengles.cpp
+    android/opengl/EmuglBackendList.cpp
+    android/opengl/EmuglBackendScanner.cpp
+    android/opengl/emugl_config.cpp
+    android/opengl/GpuFrameBridge.cpp
+    android/opengl/GLProcessPipe.cpp
+    android/opengl/gpuinfo.cpp
+    android/opengl/logger.cpp
+    android/opengl/OpenglEsPipe.cpp
+    android/opengles.cpp
     # android/openssl-support.cpp
     # android/process_setup.cpp
     # android/protobuf/DelimitedSerialization.cpp
@@ -403,7 +403,7 @@ android_target_link_libraries(
          iphlpapi::iphlpapi)
 
 # These are the libs needed for android-emu on linux.
-android_target_link_libraries(android-emu linux-x86_64 PUBLIC -lrt -lc++)
+android_target_link_libraries(android-emu linux-x86_64 PUBLIC -lrt -lstdc++)
 
 # Here are the darwin library and link dependencies. They are public and will
 # propagate onwards to others that depend on android-emu. You should really only

@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.5)
 SET(CMAKE_C_COMPILER "/usr/bin/clang")
 SET(CMAKE_CXX_COMPILER "/usr/bin/clang++")
 
+SET(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
+
 project(android)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/build/cmake/")
