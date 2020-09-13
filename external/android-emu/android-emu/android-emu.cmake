@@ -6,76 +6,76 @@ prebuilt(FFMPEG)
 # archive. We currently have to split them up due to dependencies on external
 # variables/functions that are implemented in other libraries.
 set(android-emu-common
-    android/adb-server.cpp
-    android/avd/generate.cpp
-    android/avd/hw-config.c
-    android/avd/info.c
-    android/avd/scanner.c
-    android/avd/util.c
-    android/avd/util_wrapper.cpp
-    android/avd/BugreportInfo.cpp
-    android/async-console.c
-    android/async-socket.c
-    android/async-socket-connector.c
-    android/async-utils.c
-    android/base/async/AsyncReader.cpp
-    android/base/async/AsyncSocket.cpp
-    android/base/async/AsyncSocketServer.cpp
-    android/base/async/AsyncWriter.cpp
-    android/base/async/CallbackRegistry.cpp
-    android/base/async/DefaultLooper.cpp
-    android/base/async/Looper.cpp
-    android/base/async/ScopedSocketWatch.cpp
-    android/base/async/ThreadLooper.cpp
-    android/base/network/Dns.cpp
-    android/base/sockets/SocketDrainer.cpp
-    android/base/sockets/SocketUtils.cpp
-    android/base/sockets/SocketWaiter.cpp
-    android/base/threads/internal/ParallelTaskBase.cpp
-    android/boot-properties.c
-    android/car.cpp
-    android/car-cluster.cpp
-    android/cmdline-option.cpp
-    android/CommonReportedInfo.cpp
-    android/console_auth.cpp
-    android/cpu_accelerator.cpp
-    android/crashreport/CrashSystem.cpp
-    android/crashreport/CrashReporter_common.cpp
-    android/crashreport/HangDetector.cpp
-    android/crashreport/detectors/CrashDetectors.cpp
+    # android/adb-server.cpp
+    # android/avd/generate.cpp
+    # android/avd/hw-config.c
+    # android/avd/info.c
+    # android/avd/scanner.c
+    # android/avd/util.c
+    # android/avd/util_wrapper.cpp
+    # android/avd/BugreportInfo.cpp
+    # android/async-console.c
+    # android/async-socket.c
+    # android/async-socket-connector.c
+    # android/async-utils.c
+    # android/base/async/AsyncReader.cpp
+    # android/base/async/AsyncSocket.cpp
+    # android/base/async/AsyncSocketServer.cpp
+    # android/base/async/AsyncWriter.cpp
+    # android/base/async/CallbackRegistry.cpp
+    # android/base/async/DefaultLooper.cpp
+    # android/base/async/Looper.cpp
+    # android/base/async/ScopedSocketWatch.cpp
+    # android/base/async/ThreadLooper.cpp
+    # android/base/network/Dns.cpp
+    # android/base/sockets/SocketDrainer.cpp
+    # android/base/sockets/SocketUtils.cpp
+    # android/base/sockets/SocketWaiter.cpp
+    # android/base/threads/internal/ParallelTaskBase.cpp
+    # android/boot-properties.c
+    # android/car.cpp
+    # android/car-cluster.cpp
+    # android/cmdline-option.cpp
+    # android/CommonReportedInfo.cpp
+    # android/console_auth.cpp
+    # android/cpu_accelerator.cpp
+    # android/crashreport/CrashSystem.cpp
+    # android/crashreport/CrashReporter_common.cpp
+    # android/crashreport/HangDetector.cpp
+    # android/crashreport/detectors/CrashDetectors.cpp
     android/cros.c
-    android/curl-support.c
-    android/emulation/AdbDebugPipe.cpp
-    android/emulation/AdbGuestPipe.cpp
-    android/emulation/AdbMessageSniffer.cpp
-    android/emulation/AdbHostListener.cpp
-    android/emulation/AdbHostServer.cpp
-    android/emulation/AdbHub.cpp
-    android/emulation/AndroidAsyncMessagePipe.cpp
-    android/emulation/AndroidMessagePipe.cpp
-    android/emulation/AndroidPipe.cpp
-    android/emulation/android_pipe_host.cpp
-    android/emulation/AudioCaptureEngine.cpp
-    android/emulation/AudioOutputEngine.cpp
-    android/emulation/android_pipe_pingpong.c
-    android/emulation/android_pipe_throttle.c
-    android/emulation/android_pipe_unix.cpp
-    android/emulation/android_pipe_zero.c
-    android/emulation/android_qemud.cpp
-    android/emulation/bufprint_config_dirs.cpp
-    android/emulation/ClipboardPipe.cpp
-    android/emulation/ComponentVersion.cpp
-    android/emulation/ConfigDirs.cpp
-    android/emulation/control/adb/AdbConnection.cpp
-    android/emulation/control/adb/AdbInterface.cpp
-    android/emulation/control/adb/AdbShellStream.cpp
-    android/emulation/control/adb/adbkey.cpp
-    android/emulation/control/ApkInstaller.cpp
-    android/emulation/control/EmulatorAdvertisement.cpp
-    android/emulation/control/FilePusher.cpp
-    android/emulation/control/GooglePlayServices.cpp
-    android/emulation/control/LineConsumer.cpp
-    android/emulation/control/NopRtcBridge.cpp
+    # android/curl-support.c
+    # android/emulation/AdbDebugPipe.cpp
+    # android/emulation/AdbGuestPipe.cpp
+    # android/emulation/AdbMessageSniffer.cpp
+    # android/emulation/AdbHostListener.cpp
+    # android/emulation/AdbHostServer.cpp
+    # android/emulation/AdbHub.cpp
+    # android/emulation/AndroidAsyncMessagePipe.cpp
+    # android/emulation/AndroidMessagePipe.cpp
+    # android/emulation/AndroidPipe.cpp
+    # android/emulation/android_pipe_host.cpp
+    # android/emulation/AudioCaptureEngine.cpp
+    # android/emulation/AudioOutputEngine.cpp
+    # android/emulation/android_pipe_pingpong.c
+    # android/emulation/android_pipe_throttle.c
+    # android/emulation/android_pipe_unix.cpp
+    # android/emulation/android_pipe_zero.c
+    # android/emulation/android_qemud.cpp
+    # android/emulation/bufprint_config_dirs.cpp
+    # android/emulation/ClipboardPipe.cpp
+    # android/emulation/ComponentVersion.cpp
+    # android/emulation/ConfigDirs.cpp
+    # android/emulation/control/adb/AdbConnection.cpp
+    # android/emulation/control/adb/AdbInterface.cpp
+    # android/emulation/control/adb/AdbShellStream.cpp
+    # android/emulation/control/adb/adbkey.cpp
+    # android/emulation/control/ApkInstaller.cpp
+    # android/emulation/control/EmulatorAdvertisement.cpp
+    # android/emulation/control/FilePusher.cpp
+    # android/emulation/control/GooglePlayServices.cpp
+    # android/emulation/control/LineConsumer.cpp
+    # android/emulation/control/NopRtcBridge.cpp
     android/emulation/CpuAccelerator.cpp
     android/emulation/CrossSessionSocket.cpp
     android/emulation/DmaMap.cpp
@@ -88,231 +88,232 @@ set(android-emu-common
     android/emulation/address_space_host_memory_allocator.cpp
     android/emulation/address_space_shared_slots_host_memory_allocator.cpp
     android/emulation/address_space_host_media.cpp
-    android/emulation/H264NaluParser.cpp
-    android/emulation/VpxFrameParser.cpp
-    android/emulation/VpxPingInfoParser.cpp
-    android/emulation/MediaVpxVideoHelper.cpp
-    android/emulation/MediaVpxDecoderGeneric.cpp
-    android/emulation/H264PingInfoParser.cpp
-    android/emulation/HostmemIdMapping.cpp
-    android/emulation/MediaVpxDecoder.cpp
-    android/emulation/MediaH264DecoderDefault.cpp
-    android/emulation/MediaH264DecoderGeneric.cpp
-    android/emulation/MediaFfmpegVideoHelper.cpp
-    android/emulation/MediaH264DecoderFfmpeg.cpp
-    android/emulation/MediaH264Decoder.cpp
-    android/emulation/MediaTexturePool.cpp
-    android/emulation/MediaHostRenderer.cpp
-    android/emulation/MediaSnapshotState.cpp
-    android/emulation/MediaSnapshotHelper.cpp
-    android/emulation/MediaVideoHelper.cpp
-    android/emulation/hostdevices/HostAddressSpace.cpp
-    android/emulation/LogcatPipe.cpp
-    android/emulation/MultiDisplay.cpp
-    android/emulation/MultiDisplayPipe.cpp
-    android/emulation/nand_limits.c
-    android/emulation/ParameterList.cpp
-    android/emulation/qemud/android_qemud_client.cpp
-    android/emulation/qemud/android_qemud_multiplexer.cpp
-    android/emulation/qemud/android_qemud_serial.cpp
-    android/emulation/qemud/android_qemud_service.cpp
-    android/emulation/qemud/android_qemud_sink.cpp
-    android/emulation/RefcountPipe.cpp
-    android/emulation/serial_line.cpp
-    android/emulation/SerialLine.cpp
-    android/emulation/SetupParameters.cpp
-    android/emulation/testing/TestVmLock.cpp
-    android/emulation/VmLock.cpp
-    android/error-messages.cpp
-    android/featurecontrol/FeatureControl.cpp
-    android/featurecontrol/FeatureControlImpl.cpp
-    android/featurecontrol/feature_control.cpp
-    android/featurecontrol/HWMatching.cpp
-    android/filesystems/ext4_resize.cpp
-    android/filesystems/ext4_utils.cpp
-    android/filesystems/fstab_parser.cpp
-    android/filesystems/internal/PartitionConfigBackend.cpp
-    android/filesystems/partition_config.cpp
-    android/filesystems/partition_types.cpp
-    android/filesystems/ramdisk_extractor.cpp
-    android/framebuffer.c
-    android/gps/GpxParser.cpp
-    android/gps/KmlParser.cpp
-    android/gps.c
-    android/gpu_frame.cpp
-    android/help.c
-    android/HostHwInfo.cpp
-    android/hw-control.c
-    android/hw-events.c
-    android/hw-fingerprint.c
-    android/hw-kmsg.c
-    android/hw-lcd.c
-    android/hw-qemud.cpp
-    android/jdwp/JdwpProxy.cpp
-    android/jpeg-compress.c
-    android/kernel/kernel_utils.cpp
-    android/loadpng.c
-    android/location/MapsKey.cpp
-    android/location/MapsKeyFileParser.cpp
-    android/location/Point.cpp
-    android/location/Route.cpp
-    android/location/StudioMapsKey.cpp
-    android/main-help.cpp
-    android/main-emugl.cpp
-    android/main-kernel-parameters.cpp
-    android/metrics/AdbLivenessChecker.cpp
-    android/metrics/AsyncMetricsReporter.cpp
-    android/metrics/CrashMetricsReporting.cpp
-    android/metrics/FileMetricsWriter.cpp
-    android/metrics/metrics.cpp
-    android/metrics/MetricsPaths.cpp
-    android/metrics/MetricsReporter.cpp
-    android/metrics/MetricsWriter.cpp
-    android/metrics/NullMetricsReporter.cpp
-    android/metrics/NullMetricsWriter.cpp
-    android/metrics/Percentiles.cpp
-    android/metrics/PerfStatReporter.cpp
-    android/metrics/PeriodicReporter.cpp
-    android/metrics/PlaystoreMetricsWriter.cpp
-    android/metrics/SyncMetricsReporter.cpp
-    android/metrics/StudioConfig.cpp
-    android/metrics/TextMetricsWriter.cpp
-    android/multi-instance.cpp
-    android/multitouch-port.c
-    android/multitouch-screen.c
-    android/network/control.cpp
-    android/network/constants.c
-    android/network/globals.c
-    android/network/NetworkPipe.cpp
-    android/network/wifi.cpp
-    android/network/WifiForwardClient.cpp
-    android/network/WifiForwardPeer.cpp
-    android/network/WifiForwardPipe.cpp
-    android/network/WifiForwardServer.cpp
-    android/opengl/EmuglBackendList.cpp
-    android/opengl/EmuglBackendScanner.cpp
-    android/opengl/emugl_config.cpp
-    android/opengl/GpuFrameBridge.cpp
-    android/opengl/GLProcessPipe.cpp
-    android/opengl/gpuinfo.cpp
-    android/opengl/logger.cpp
-    android/opengl/OpenglEsPipe.cpp
-    android/opengles.cpp
-    android/openssl-support.cpp
-    android/process_setup.cpp
-    android/protobuf/DelimitedSerialization.cpp
-    android/protobuf/LoadSave.cpp
-    android/protobuf/ProtobufLogging.cpp
-    android/proxy/proxy_common.c
-    android/proxy/proxy_http.c
-    android/proxy/proxy_http_connector.c
-    android/proxy/proxy_http_rewriter.c
-    android/proxy/proxy_setup.cpp
-    android/proxy/ProxyUtils.cpp
-    android/qemu-tcpdump.c
-    android/qt/qt_path.cpp
-    android/qt/qt_setup.cpp
-    android/resource.c
-    android/sdk-controller-socket.c
-    android/sensor_mock/SensorMockUtils.cpp
-    android/session_phase_reporter.cpp
-    android/shaper.c
-    android/snaphost-android.c
-    android/snapshot.c
-    android/snapshot/common.cpp
-    android/snapshot/Compressor.cpp
-    android/snapshot/Decompressor.cpp
-    android/snapshot/GapTracker.cpp
-    android/snapshot/IncrementalStats.cpp
-    android/snapshot/interface.cpp
-    android/snapshot/Loader.cpp
-    android/snapshot/MemoryWatch_common.cpp
-    android/snapshot/PathUtils.cpp
-    android/snapshot/Hierarchy.cpp
-    android/snapshot/Quickboot.cpp
-    android/snapshot/RamLoader.cpp
-    android/snapshot/RamSaver.cpp
-    android/snapshot/RamSnapshotTesting.cpp
-    android/snapshot/Saver.cpp
-    android/snapshot/Snapshot.cpp
-    android/snapshot/Snapshotter.cpp
-    android/snapshot/TextureLoader.cpp
-    android/snapshot/TextureSaver.cpp
-    android/telephony/debug.c
-    android/telephony/gsm.c
-    android/telephony/modem.c
-    android/telephony/MeterService.cpp
-    android/telephony/modem_driver.c
-    android/telephony/remote_call.c
-    android/telephony/phone_number.cpp
-    android/telephony/SimAccessRules.cpp
-    android/telephony/sim_card.c
-    android/telephony/sms.c
-    android/telephony/sysdeps.c
-    android/telephony/TagLengthValue.cpp
+    # android/emulation/H264NaluParser.cpp
+    # android/emulation/VpxFrameParser.cpp
+    # android/emulation/VpxPingInfoParser.cpp
+    # android/emulation/MediaVpxVideoHelper.cpp
+    # android/emulation/MediaVpxDecoderGeneric.cpp
+    # android/emulation/H264PingInfoParser.cpp
+    # android/emulation/HostmemIdMapping.cpp
+    # android/emulation/MediaVpxDecoder.cpp
+    # android/emulation/MediaH264DecoderDefault.cpp
+    # android/emulation/MediaH264DecoderGeneric.cpp
+    # android/emulation/MediaFfmpegVideoHelper.cpp
+    # android/emulation/MediaH264DecoderFfmpeg.cpp
+    # android/emulation/MediaH264Decoder.cpp
+    # android/emulation/MediaTexturePool.cpp
+    # android/emulation/MediaHostRenderer.cpp
+    # android/emulation/MediaSnapshotState.cpp
+    # android/emulation/MediaSnapshotHelper.cpp
+    # android/emulation/MediaVideoHelper.cpp
+    # android/emulation/hostdevices/HostAddressSpace.cpp
+    # android/emulation/LogcatPipe.cpp
+    # android/emulation/MultiDisplay.cpp
+    # android/emulation/MultiDisplayPipe.cpp
+    # android/emulation/nand_limits.c
+    # android/emulation/ParameterList.cpp
+    # android/emulation/qemud/android_qemud_client.cpp
+    # android/emulation/qemud/android_qemud_multiplexer.cpp
+    # android/emulation/qemud/android_qemud_serial.cpp
+    # android/emulation/qemud/android_qemud_service.cpp
+    # android/emulation/qemud/android_qemud_sink.cpp
+    # android/emulation/RefcountPipe.cpp
+    # android/emulation/serial_line.cpp
+    # android/emulation/SerialLine.cpp
+    # android/emulation/SetupParameters.cpp
+    # android/emulation/testing/TestVmLock.cpp
+    # android/emulation/VmLock.cpp
+    # android/error-messages.cpp
+    # android/featurecontrol/FeatureControl.cpp
+    # android/featurecontrol/FeatureControlImpl.cpp
+    # android/featurecontrol/feature_control.cpp
+    # android/featurecontrol/HWMatching.cpp
+    # android/filesystems/ext4_resize.cpp
+    # android/filesystems/ext4_utils.cpp
+    # android/filesystems/fstab_parser.cpp
+    # android/filesystems/internal/PartitionConfigBackend.cpp
+    # android/filesystems/partition_config.cpp
+    # android/filesystems/partition_types.cpp
+    # android/filesystems/ramdisk_extractor.cpp
+    # android/framebuffer.c
+    # android/gps/GpxParser.cpp
+    # android/gps/KmlParser.cpp
+    # android/gps.c
+    # android/gpu_frame.cpp
+    # android/help.c
+    # android/HostHwInfo.cpp
+    # android/hw-control.c
+    # android/hw-events.c
+    # android/hw-fingerprint.c
+    # android/hw-kmsg.c
+    # android/hw-lcd.c
+    # android/hw-qemud.cpp
+    # android/jdwp/JdwpProxy.cpp
+    # android/jpeg-compress.c
+    # android/kernel/kernel_utils.cpp
+    # android/loadpng.c
+    # android/location/MapsKey.cpp
+    # android/location/MapsKeyFileParser.cpp
+    # android/location/Point.cpp
+    # android/location/Route.cpp
+    # android/location/StudioMapsKey.cpp
+    # android/main-help.cpp
+    # android/main-emugl.cpp
+    # android/main-kernel-parameters.cpp
+    # android/metrics/AdbLivenessChecker.cpp
+    # android/metrics/AsyncMetricsReporter.cpp
+    # android/metrics/CrashMetricsReporting.cpp
+    # android/metrics/FileMetricsWriter.cpp
+    # android/metrics/metrics.cpp
+    # android/metrics/MetricsPaths.cpp
+    # android/metrics/MetricsReporter.cpp
+    # android/metrics/MetricsWriter.cpp
+    # android/metrics/NullMetricsReporter.cpp
+    # android/metrics/NullMetricsWriter.cpp
+    # android/metrics/Percentiles.cpp
+    # android/metrics/PerfStatReporter.cpp
+    # android/metrics/PeriodicReporter.cpp
+    # android/metrics/PlaystoreMetricsWriter.cpp
+    # android/metrics/SyncMetricsReporter.cpp
+    # android/metrics/StudioConfig.cpp
+    # android/metrics/TextMetricsWriter.cpp
+    # android/multi-instance.cpp
+    # android/multitouch-port.c
+    # android/multitouch-screen.c
+    # android/network/control.cpp
+    # android/network/constants.c
+    # android/network/globals.c
+    # android/network/NetworkPipe.cpp
+    # android/network/wifi.cpp
+    # android/network/WifiForwardClient.cpp
+    # android/network/WifiForwardPeer.cpp
+    # android/network/WifiForwardPipe.cpp
+    # android/network/WifiForwardServer.cpp
+    # android/opengl/EmuglBackendList.cpp
+    # android/opengl/EmuglBackendScanner.cpp
+    # android/opengl/emugl_config.cpp
+    # android/opengl/GpuFrameBridge.cpp
+    # android/opengl/GLProcessPipe.cpp
+    # android/opengl/gpuinfo.cpp
+    # android/opengl/logger.cpp
+    # android/opengl/OpenglEsPipe.cpp
+    # android/opengles.cpp
+    # android/openssl-support.cpp
+    # android/process_setup.cpp
+    # android/protobuf/DelimitedSerialization.cpp
+    # android/protobuf/LoadSave.cpp
+    # android/protobuf/ProtobufLogging.cpp
+    # android/proxy/proxy_common.c
+    # android/proxy/proxy_http.c
+    # android/proxy/proxy_http_connector.c
+    # android/proxy/proxy_http_rewriter.c
+    # android/proxy/proxy_setup.cpp
+    # android/proxy/ProxyUtils.cpp
+    # android/qemu-tcpdump.c
+    # android/qt/qt_path.cpp
+    # android/qt/qt_setup.cpp
+    # android/resource.c
+    # android/sdk-controller-socket.c
+    # android/sensor_mock/SensorMockUtils.cpp
+    # android/session_phase_reporter.cpp
+    # android/shaper.c
+    # android/snaphost-android.c
+    # android/snapshot.c
+    # android/snapshot/common.cpp
+    # android/snapshot/Compressor.cpp
+    # android/snapshot/Decompressor.cpp
+    # android/snapshot/GapTracker.cpp
+    # android/snapshot/IncrementalStats.cpp
+    # android/snapshot/interface.cpp
+    # android/snapshot/Loader.cpp
+    # android/snapshot/MemoryWatch_common.cpp
+    # android/snapshot/PathUtils.cpp
+    # android/snapshot/Hierarchy.cpp
+    # android/snapshot/Quickboot.cpp
+    # android/snapshot/RamLoader.cpp
+    # android/snapshot/RamSaver.cpp
+    # android/snapshot/RamSnapshotTesting.cpp
+    # android/snapshot/Saver.cpp
+    # android/snapshot/Snapshot.cpp
+    # android/snapshot/Snapshotter.cpp
+    # android/snapshot/TextureLoader.cpp
+    # android/snapshot/TextureSaver.cpp
+    # android/telephony/debug.c
+    # android/telephony/gsm.c
+    # android/telephony/modem.c
+    # android/telephony/MeterService.cpp
+    # android/telephony/modem_driver.c
+    # android/telephony/remote_call.c
+    # android/telephony/phone_number.cpp
+    # android/telephony/SimAccessRules.cpp
+    # android/telephony/sim_card.c
+    # android/telephony/sms.c
+    # android/telephony/sysdeps.c
+    # android/telephony/TagLengthValue.cpp
     android/uncompress.cpp
-    android/update-check/UpdateChecker.cpp
-    android/update-check/VersionExtractor.cpp
-    android/user-config.cpp
-    android/utils/dns.cpp
-    android/utils/Random.cpp
-    android/utils/sockets.c
-    android/utils/socket_drainer.cpp
-    android/utils/looper.cpp
-    android/verified-boot/load_config.cpp
-    android/wear-agent/android_wear_agent.cpp
-    android/wear-agent/WearAgent.cpp
-    android/wear-agent/PairUpWearPhone.cpp)
+    # android/update-check/UpdateChecker.cpp
+    # android/update-check/VersionExtractor.cpp
+    # android/user-config.cpp
+    # android/utils/dns.cpp
+    # android/utils/Random.cpp
+    # android/utils/sockets.c
+    # android/utils/socket_drainer.cpp
+    # android/utils/looper.cpp
+    # android/verified-boot/load_config.cpp
+    # android/wear-agent/android_wear_agent.cpp
+    # android/wear-agent/WearAgent.cpp
+    # android/wear-agent/PairUpWearPhone.cpp
+    )
 
 # These are the set of sources for which we know we have dependencies. You can
 # use this as a starting point to figure out what can move to a seperate library
-set(android_emu_dependent_src
-    android/automation/AutomationController.cpp
-    android/automation/AutomationEventSink.cpp
-    android/camera/camera-common.cpp
-    android/camera/camera-format-converters.c
-    android/camera/camera-list.cpp
-    android/camera/camera-metrics.cpp
-    android/camera/camera-service.cpp
-    android/camera/camera-videoplayback.cpp
-    android/camera/camera-videoplayback-default-renderer.cpp
-    android/camera/camera-videoplayback-render-multiplexer.cpp
-    android/camera/camera-videoplayback-video-renderer.cpp
-    android/camera/camera-virtualscene.cpp
-    android/camera/camera-virtualscene-utils.cpp
-    android/emulation/control/ScreenCapturer.cpp
-    android/emulation/FakeRotatingCameraSensor.cpp
-    android/emulation/HostMemoryService.cpp
-    android/emulation/Keymaster3.cpp
-    android/emulation/QemuMiscPipe.cpp
-    android/console.cpp
-    android/http_proxy.c
-    android/hw-sensors.cpp
-    android/main-common.c
-    android/main-qemu-parameters.cpp
-    android/offworld/OffworldPipe.cpp
-    android/physics/AmbientEnvironment.cpp
-    android/physics/InertialModel.cpp
-    android/physics/PhysicalModel.cpp
-    android/physics/FoldableModel.cpp
-    android/qemu-setup.cpp
-    android/sensors-port.c
-    android/snapshot/SnapshotAPI.cpp
-    android/snapshot/Icebox.cpp
-    android/test/checkboot.cpp
-    android/videoinjection/VideoInjectionController.cpp
-    android/videoplayback/VideoplaybackRenderTarget.cpp
-    android/virtualscene/MeshSceneObject.cpp
-    android/virtualscene/PosterInfo.cpp
-    android/virtualscene/PosterSceneObject.cpp
-    android/virtualscene/Renderer.cpp
-    android/virtualscene/RenderTarget.cpp
-    android/virtualscene/Scene.cpp
-    android/virtualscene/SceneCamera.cpp
-    android/virtualscene/SceneObject.cpp
-    android/virtualscene/TextureUtils.cpp
-    android/virtualscene/VirtualSceneManager.cpp
-    android/virtualscene/WASDInputHandler.cpp)
+# set(android_emu_dependent_src
+#     android/automation/AutomationController.cpp
+#     android/automation/AutomationEventSink.cpp
+#     android/camera/camera-common.cpp
+#     android/camera/camera-format-converters.c
+#     android/camera/camera-list.cpp
+#     android/camera/camera-metrics.cpp
+#     android/camera/camera-service.cpp
+#     android/camera/camera-videoplayback.cpp
+#     android/camera/camera-videoplayback-default-renderer.cpp
+#     android/camera/camera-videoplayback-render-multiplexer.cpp
+#     android/camera/camera-videoplayback-video-renderer.cpp
+#     android/camera/camera-virtualscene.cpp
+#     android/camera/camera-virtualscene-utils.cpp
+#     android/emulation/control/ScreenCapturer.cpp
+#     android/emulation/FakeRotatingCameraSensor.cpp
+#     android/emulation/HostMemoryService.cpp
+#     android/emulation/Keymaster3.cpp
+#     android/emulation/QemuMiscPipe.cpp
+#     android/console.cpp
+#     android/http_proxy.c
+#     android/hw-sensors.cpp
+#     android/main-common.c
+#     android/main-qemu-parameters.cpp
+#     android/offworld/OffworldPipe.cpp
+#     android/physics/AmbientEnvironment.cpp
+#     android/physics/InertialModel.cpp
+#     android/physics/PhysicalModel.cpp
+#     android/physics/FoldableModel.cpp
+#     android/qemu-setup.cpp
+#     android/sensors-port.c
+#     android/snapshot/SnapshotAPI.cpp
+#     android/snapshot/Icebox.cpp
+#     android/test/checkboot.cpp
+#     android/videoinjection/VideoInjectionController.cpp
+#     android/videoplayback/VideoplaybackRenderTarget.cpp
+#     android/virtualscene/MeshSceneObject.cpp
+#     android/virtualscene/PosterInfo.cpp
+#     android/virtualscene/PosterSceneObject.cpp
+#     android/virtualscene/Renderer.cpp
+#     android/virtualscene/RenderTarget.cpp
+#     android/virtualscene/Scene.cpp
+#     android/virtualscene/SceneCamera.cpp
+#     android/virtualscene/SceneObject.cpp
+#     android/virtualscene/TextureUtils.cpp
+#     android/virtualscene/VirtualSceneManager.cpp
+#     android/virtualscene/WASDInputHandler.cpp)
 
 # The standard archive has all the sources, including those that have external
 # dependencies that we have not properly declared yet.
@@ -320,9 +321,9 @@ set(android_emu_dependent_src
 # are not circular
 list(APPEND android-emu_src ${android-emu-common} ${android_emu_dependent_src})
 
-if(NOT OPTION_GFXSTREAM_BACKEND)
-  list(APPEND android-emu_src "android/network/Ieee80211Frame.cpp")
-endif()
+# if(NOT OPTION_GFXSTREAM_BACKEND)
+#   list(APPEND android-emu_src "android/network/Ieee80211Frame.cpp")
+# endif()
 
 android_add_library(
   TARGET android-emu
@@ -350,7 +351,7 @@ android_add_library(
         android/emulation/dynlink_cuda.cpp
         android/emulation/dynlink_nvcuvid.cpp
         android/camera/camera-capture-linux.c
-        android/crashreport/CrashReporter_linux.cpp
+        # android/crashreport/CrashReporter_linux.cpp
   DARWIN # cmake-format: sortable
          android/camera/camera-capture-mac.m
          android/emulation/MediaH264DecoderVideoToolBox.cpp
@@ -369,45 +370,21 @@ target_link_libraries(
   android-emu
   PUBLIC FFMPEG::FFMPEG
          VPX::VPX
-         emulator-libext4_utils
          android-emu-base
-         emulator-libsparse
-         emulator-libselinux
-         emulator-libjpeg
-         emulator-libyuv
-         emulator-libwebp
-         emulator-tinyobjloader
-         emulator-libkeymaster3
-         emulator-murmurhash
-         emulator-tinyepoxy
-         emulator-libyuv
-         picosha2
-         # Protobuf dependencies
-         metrics
-         featurecontrol
-         crashreport
-         location
-         emulation
-         snapshot
-         telephony
-         verified-boot
-         automation
-         offworld
-         # Prebuilt libraries
-         android-net
-         breakpad_client
+         jpeg
+         webp
          curl
          ssl
          crypto
          LibXml2::LibXml2
          png
          lz4
-         zlib
+         z
          android-hw-config)
 
-if(NOT OPTION_GFXSTREAM_BACKEND)
-  target_link_libraries(android-emu PRIVATE hostapd)
-endif()
+# if(NOT OPTION_GFXSTREAM_BACKEND)
+#   target_link_libraries(android-emu PRIVATE hostapd)
+# endif()
 
 # Here are the windows library and link dependencies. They are public and will
 # propagate onwards to others that depend on android-emu
@@ -502,7 +479,7 @@ if(OPTION_GFXSTREAM_BACKEND)
 endif()
 
 # Boo, we need the make_ext4fs executable
-add_dependencies(android-emu emulator_make_ext4fs)
+# add_dependencies(android-emu emulator_make_ext4fs)
 
 set(android-emu-min
     android/avd/hw-config.c
@@ -1042,10 +1019,10 @@ if(NOT LINUX_AARCH64)
   android_target_dependency(android-emu_unittests all E2FSPROGS_DEPENDENCIES)
 
   # Boo! We depend on makeext
-  add_custom_command(
-    TARGET android-emu_unittests POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:emulator_make_ext4fs>
-            ${CMAKE_CURRENT_BINARY_DIR})
+  # add_custom_command(
+  #   TARGET android-emu_unittests POST_BUILD
+  #   COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:emulator_make_ext4fs>
+  #           ${CMAKE_CURRENT_BINARY_DIR})
 
   # Unit tests for the protobufs
   android_add_test(

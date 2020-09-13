@@ -13,20 +13,20 @@ endif()
 
 include(android)
 
-if(NOT TARGET gmock_main)
-  add_subdirectory(${ANDROID_QEMU2_TOP_DIR}/../googletest googletest)
-  # Okay, google test is not happy under msvc
-  android_target_compile_definitions(
-    gmock_main windows_msvc-x86_64 PUBLIC
-    -DGTEST_INCLUDE_GTEST_INTERNAL_CUSTOM_GTEST_H_)
-  android_target_compile_definitions(
-    gmock windows_msvc-x86_64 PUBLIC
-    -DGTEST_INCLUDE_GTEST_INTERNAL_CUSTOM_GTEST_H_)
-  android_target_compile_definitions(
-    gtest windows_msvc-x86_64 PUBLIC
-    -DGTEST_INCLUDE_GTEST_INTERNAL_CUSTOM_GTEST_H_)
-  enable_testing()
-endif()
+# if(NOT TARGET gmock_main)
+#   add_subdirectory(${ANDROID_QEMU2_TOP_DIR}/../googletest googletest)
+#   # Okay, google test is not happy under msvc
+#   android_target_compile_definitions(
+#     gmock_main windows_msvc-x86_64 PUBLIC
+#     -DGTEST_INCLUDE_GTEST_INTERNAL_CUSTOM_GTEST_H_)
+#   android_target_compile_definitions(
+#     gmock windows_msvc-x86_64 PUBLIC
+#     -DGTEST_INCLUDE_GTEST_INTERNAL_CUSTOM_GTEST_H_)
+#   android_target_compile_definitions(
+#     gtest windows_msvc-x86_64 PUBLIC
+#     -DGTEST_INCLUDE_GTEST_INTERNAL_CUSTOM_GTEST_H_)
+#   enable_testing()
+# endif()
 
 # Emugen executable (note not unicode safe!)
 android_add_executable(
@@ -39,9 +39,9 @@ target_include_directories(emugen
                            PRIVATE ${ANDROID_QEMU2_TOP_DIR}/android/android-emu)
 
 # The unit tests
-android_add_test(TARGET emugen_unittests SRC # cmake-format: sortable
-                                             Parser.cpp Parser_unittest.cpp)
-target_link_libraries(emugen_unittests PRIVATE gmock_main)
+# android_add_test(TARGET emugen_unittests SRC # cmake-format: sortable
+#                                              Parser.cpp Parser_unittest.cpp)
+# target_link_libraries(emugen_unittests PRIVATE gmock_main)
 
 # Shell based tests, only possible if we have a shell runner
 find_program(BASH_PROGRAM bash)

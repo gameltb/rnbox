@@ -14,7 +14,7 @@
 
 get_filename_component(
   PREBUILT_ROOT
-  "${ANDROID_QEMU2_TOP_DIR}/../../prebuilts/android-emulator-build/common/ANGLE/${ANDROID_TARGET_TAG}"
+  "${ANDROID_QEMU2_TOP_DIR}/common/ANGLE-${ANDROID_TARGET_TAG}"
   ABSOLUTE)
 
 set(ANGLE_INCLUDE_DIRS "${PREBUILT_ROOT}/include")

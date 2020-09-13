@@ -11,7 +11,7 @@
 
 get_filename_component(
   PREBUILT_ROOT
-  "${ANDROID_QEMU2_TOP_DIR}/../../prebuilts/android-emulator-build/common/e2fsprogs/${ANDROID_TARGET_TAG}"
+  "${ANDROID_QEMU2_TOP_DIR}/common/e2fsprogs-${ANDROID_TARGET_TAG}"
   ABSOLUTE)
 
 if(DARWIN_X86_64)

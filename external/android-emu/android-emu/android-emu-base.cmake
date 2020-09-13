@@ -3,7 +3,7 @@
 
 # Dependencies
 prebuilt(UUID)
-prebuilt(GLIB2) # Acts as windows stdio compatibility layer.
+# prebuilt(GLIB2) # Acts as windows stdio compatibility layer.
 prebuilt(LIBUNWIND)
 if(OPTION_TCMALLOC)
   prebuilt(TCMALLOC)
@@ -139,7 +139,7 @@ android_target_link_libraries(android-emu-base windows_msvc-x86_64
 target_include_directories(android-emu-base PUBLIC .)
 # Library dependencies, these are public so they will propagate, if you link
 # against the base you will link against LZ4 & UUID
-target_link_libraries(android-emu-base PRIVATE zlib lz4 UUID::UUID)
+target_link_libraries(android-emu-base PRIVATE z lz4 UUID::UUID)
 if(OPTION_TCMALLOC)
   android_target_link_libraries(
     android-emu-base linux-x86_64
@@ -182,16 +182,16 @@ android_target_compile_options(android-emu-base darwin-x86_64
 # Compiler flags, not that these should never propagate (i.e. set to public) as
 # we really want to limit the usage of these flags.
 android_target_compile_options(
-  android-emu-base Clang PRIVATE "-Wno-parentheses" "-Wno-invalid-constexpr")
+  android-emu-base Clang PRIVATE "-Wno-parentheses" "-Wno-invalid-constexpr" "-fPIC")
 
 android_target_compile_options(android-emu-base windows_msvc-x86_64
                                PRIVATE "-Wno-inconsistent-dllimport")
 
 # Add the benchmark
-android_add_executable(
-  TARGET android-emu_benchmark NODISTRIBUTE
-  SRC # cmake-format: sortable
-      android/base/synchronization/Lock_benchmark.cpp
-      android/base/Log_benchmark.cpp)
-target_link_libraries(android-emu_benchmark PRIVATE android-emu-base
-                                                    emulator-gbench)
+# android_add_executable(
+#   TARGET android-emu_benchmark NODISTRIBUTE
+#   SRC # cmake-format: sortable
+#       android/base/synchronization/Lock_benchmark.cpp
+#       android/base/Log_benchmark.cpp)
+# target_link_libraries(android-emu_benchmark PRIVATE android-emu-base
+#                                                     emulator-gbench)

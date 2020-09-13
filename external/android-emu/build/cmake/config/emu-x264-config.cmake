@@ -11,12 +11,12 @@
 
 get_filename_component(
   PREBUILT_ROOT
-  "${ANDROID_QEMU2_TOP_DIR}/../../prebuilts/android-emulator-build/common/x264/${ANDROID_TARGET_TAG}"
+  "/usr/"
   ABSOLUTE)
 
 set(X264_INCLUDE_DIR "${PREBUILT_ROOT}/include/")
 set(X264_INCLUDE_DIRS "${X264_INCLUDE_DIR}")
-set(X264_LIBRARIES "${PREBUILT_ROOT}/lib/libx264${CMAKE_STATIC_LIBRARY_SUFFIX}")
+set(X264_LIBRARIES "${PREBUILT_ROOT}/lib/libx264${CMAKE_SHARED_LIBRARY_SUFFIX}")
 set(X264_FOUND TRUE)
 
 android_add_prebuilt_library(

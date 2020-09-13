@@ -17,7 +17,7 @@ android_add_library(
 
 android_target_compile_definitions(emugl_common windows_msvc-x86_64 PRIVATE
                                    "-DBUILDING_EMUGL_COMMON_SHARED")
-target_compile_options(emugl_common PRIVATE -fvisibility=default)
+target_compile_options(emugl_common PRIVATE -fvisibility=default -fPIC)
 target_link_libraries(emugl_common PRIVATE emugl_base)
 target_link_libraries(emugl_common PRIVATE android-emu-base)
 target_include_directories(

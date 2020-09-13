@@ -1,0 +1,4 @@
+[submodule "external/android-emu/goldfish-opengl"]
+	path = external/android-emu/goldfish-opengl
+	url = https://github.com/gameltb/android_device_rnbox_goldfish-opengl
+	branch = emu-30-release

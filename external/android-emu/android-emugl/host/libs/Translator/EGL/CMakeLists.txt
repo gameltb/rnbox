@@ -24,7 +24,7 @@ target_link_libraries(EGL_translator_static PRIVATE emugl_base android-emu-base
                                              astc-codec)
 target_link_libraries(EGL_translator_static PUBLIC GLES_CM_translator_static GLES_V2_translator_static)
 target_compile_options(
-    EGL_translator_static PRIVATE -fvisibility=hidden -Wno-inconsistent-missing-override -Wno-macro-redefined)
+    EGL_translator_static PRIVATE -fvisibility=hidden -Wno-inconsistent-missing-override -Wno-macro-redefined -fPIC)
 android_target_compile_options(EGL_translator_static darwin-x86_64
                                PRIVATE -Wno-deprecated-declarations)
 android_target_compile_options(EGL_translator_static darwin-x86_64

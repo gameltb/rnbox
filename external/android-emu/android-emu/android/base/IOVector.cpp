@@ -19,7 +19,7 @@
 
 namespace android {
 namespace base {
-
+typedef char uint8_t;
 size_t IOVector::copyTo(void* destination, size_t offset, size_t size) {
     iovec_lookup lookup = lookup_iovec(offset);
     if (lookup.iov_index == mIOVecs.size()) {

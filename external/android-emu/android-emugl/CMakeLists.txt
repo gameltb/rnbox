@@ -1,6 +1,6 @@
 set(ANDROID_EMUGL_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(GOLDFISH_EMUGL_DIR
-    ${ANDROID_QEMU2_TOP_DIR}/../../device/generic/goldfish-opengl/)
+    ${ANDROID_QEMU2_TOP_DIR}/goldfish-opengl/)
 
 # We start of defining an interface library that defines all the compiler
 # settings we wish to use for all libs. please keep this at a bare minimum!
@@ -89,7 +89,7 @@ add_subdirectory(shared/emugl/common)
 
 if(NOT WINDOWS AND NOT LINUX_AARCH64)
   add_subdirectory(guest)
-  add_subdirectory(${ANDROID_QEMU2_TOP_DIR}/../../device/generic/goldfish-opengl
+  add_subdirectory(${ANDROID_QEMU2_TOP_DIR}/goldfish-opengl
                    goldfish-opengl)
 endif()
 

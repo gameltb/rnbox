@@ -11,7 +11,7 @@
 
 get_filename_component(
   PREBUILT_ROOT
-  "${ANDROID_QEMU2_TOP_DIR}/../../prebuilts/android-emulator-build/common/vulkan/${ANDROID_TARGET_TAG}"
+  "${ANDROID_QEMU2_TOP_DIR}/common/vulkan-${ANDROID_TARGET_TAG}"
   ABSOLUTE)
 
 set(VULKAN_FOUND TRUE)

@@ -501,7 +501,7 @@ endfunction()
 
 function(android_add_default_test_properties name)
   # Configure the test to run with asan..
-  file(READ "${ANDROID_QEMU2_TOP_DIR}/android/asan_overrides" ASAN_OVERRIDES)
+  file(READ "${ANDROID_QEMU2_TOP_DIR}/asan_overrides" ASAN_OVERRIDES)
   set_property(TEST ${name} PROPERTY ENVIRONMENT
                                      "ASAN_OPTIONS=${ASAN_OVERRIDES}")
   set_property(
@@ -679,11 +679,11 @@ function(android_generate_hw_config)
   add_custom_command(
     OUTPUT ${ANDROID_HW_CONFIG_H}
     COMMAND
-      python ${ANDROID_QEMU2_TOP_DIR}/android/scripts/gen-hw-config.py
-      ${ANDROID_QEMU2_TOP_DIR}/android/android-emu/android/avd/hardware-properties.ini
+      python ${ANDROID_QEMU2_TOP_DIR}/scripts/gen-hw-config.py
+      ${ANDROID_QEMU2_TOP_DIR}/android-emu/android/avd/hardware-properties.ini
       ${ANDROID_HW_CONFIG_H}
     DEPENDS
-      ${ANDROID_QEMU2_TOP_DIR}/android/android-emu/android/avd/hardware-properties.ini
+      ${ANDROID_QEMU2_TOP_DIR}/android-emu/android/avd/hardware-properties.ini
     VERBATIM)
   android_add_library(TARGET android-hw-config LICENSE Apache-2.0
                       SRC ${ANDROID_HW_CONFIG_H} dummy.c)

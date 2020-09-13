@@ -11,7 +11,7 @@
 
 get_filename_component(
   PREBUILT_ROOT
-  "${ANDROID_QEMU2_TOP_DIR}/../../prebuilts/android-emulator-build/common/libunwind/${ANDROID_TARGET_TAG}"
+  "${ANDROID_QEMU2_TOP_DIR}/common/libunwind-${ANDROID_TARGET_TAG}"
   ABSOLUTE)
 if(LINUX)
   set(LIBUNWIND_INCLUDE_DIR "${PREBUILT_ROOT}/include")

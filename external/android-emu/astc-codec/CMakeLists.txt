@@ -15,6 +15,7 @@ cmake_minimum_required(VERSION 3.1.0)
 project(astc-codec)
 
 option(OPTION_ASTC_TESTS "Build all the unit tests." ON)
+set(OPTION_ASTC_TESTS OFF)
 
 # TODO add support for the fuzzer, it has some additional dependencies we are not
 # yet bringing in.
